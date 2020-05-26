@@ -6,7 +6,7 @@ A simple c++ library to detect scene transitions in a video.
 
 * Clone the github repo
  `git clone https:@github.com:sam09/shot-detector.git`
-* cd `shot-detector`
+* `cd shot-detector`
 * `make`
 * Run `./scripts/scene-change-detector.sh`
 
