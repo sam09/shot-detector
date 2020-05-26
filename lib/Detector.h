@@ -8,8 +8,8 @@ class Detector
 {
 	public:
 		Detector() {};
-		virtual bool processFrame(cv::cuda::GpuMat frame, cv::cuda::GpuMat prevframe, int lastFrameNum) = 0;
-		virtual bool processFrame(cv::Mat frame, cv::Mat prevframe, int lastFrameNum) = 0;
+		virtual bool process_frame(cv::cuda::GpuMat, cv::cuda::GpuMat, int, int) = 0;
+		virtual bool process_frame(cv::Mat, cv::Mat, int, int) = 0;
 };
 
 #endif
