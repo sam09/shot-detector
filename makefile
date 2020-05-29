@@ -1,7 +1,7 @@
 MODULE_PATH := .
 BIN_PATH := $(MODULE_PATH)/scripts
 TARGET := $(BIN_PATH)/scene_detect
-INC_PATH := $(MODULE_PATH)/lib
+INC_PATH := $(MODULE_PATH)/inc
 
 all: $(TARGET)
 
