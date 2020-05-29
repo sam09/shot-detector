@@ -18,7 +18,7 @@ elif [[ -z "$output" ]]; then
 	print_help_and_exit
 elif [[ -z "$3" ]]; then
 	use_cuda=0
-elif [[ "$3" -eq "--use_cuda" ]]; then
+elif [[ "$3" = "--use-cuda" ]]; then
 	use_cuda=1
 else
 	echo "$3 Invalid option"

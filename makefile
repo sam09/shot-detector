@@ -9,6 +9,7 @@ CCFLAGS :=  -g -std=c++11
 CC := g++
 
 INCLUDE_DIRS :=  -I $(INC_PATH) \
+	-I /usr/local/cuda \
 	`pkg-config opencv4 --cflags --libs` \
 	-lcuda \
 
