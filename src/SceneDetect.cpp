@@ -18,7 +18,6 @@ SceneDetect::SceneDetect(bool use_cuda, std::string input, std::string output, i
 	this->total_frames = 0;
 }
 
-
 void SceneDetect::detect_cuts_gpu(ContentDetector *content_detector, std::vector<int> &cuts, int last_frame, cv::Size sz) {
 	cv::cuda::GpuMat frame, hsv_frame, prev_hsv_frame;
 	try {

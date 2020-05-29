@@ -1,9 +1,11 @@
 
 #include <iostream>
-#include "opencv2/opencv.hpp"
+#include <opencv2/cudacodec.hpp>
 #include "opencv2/core.hpp"
+#include "opencv2/opencv.hpp"
 #include "opencv2/highgui.hpp"
-#include "opencv2/cudaarithm.hpp"
+#include "opencv2/videoio.hpp"
+#include "opencv2/core/cuda.hpp"
 #include <string>
 #include "SceneDetect.h"
 #include  "ContentDetector.h"
@@ -23,9 +25,9 @@ int main (int argc, char* argv[])
 	int threshold = 30;
 	int min_scene_len = 15;
 	int num_pixels_per_frame = 0;
-
 	ContentDetector *c = new ContentDetector(threshold, min_scene_len, num_pixels_per_frame);
     SceneDetect s (use_cuda == 1, input, output, duration, c);
     std::cout<<"Starting video cut detection"<<std::endl;
     s.detect_cuts();
+    return 0;
 }

@@ -9,7 +9,8 @@ CCFLAGS :=  -g -std=c++11
 CC := g++
 
 INCLUDE_DIRS :=  -I $(INC_PATH) \
-	`pkg-config opencv --cflags --libs`
+	`pkg-config opencv4 --cflags --libs` \
+	-lcuda \
 
 SRCS := ContentDetector.cpp SceneDetect.cpp main.cpp
 SRC_DIR := $(MODULE_PATH)/src
